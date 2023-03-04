@@ -1,28 +1,28 @@
 [
   {
     "category": "Reaction",
-    "score": 100,
+    "score":50,
     "corPrimario": "var(--vermelho)",
     "corSecundario": "#fff5f5",
     "icon": "./assets/images/icon-reaction.svg"
   },
   {
     "category": "Memory",
-    "score": 100,
+    "score":30,
     "corPrimario":"var(--laranjaAvermelhado)",
     "corSecundario":"#fffbf2",
     "icon": "./assets/images/icon-memory.svg"
   },
   {
     "category": "Verbal",
-    "score": 100,
+    "score":25,
     "corPrimario":"var(--verde)",
     "corSecundario":"#f1faf9",
     "icon": "./assets/images/icon-verbal.svg"
   },
   {
     "category": "Visual",
-    "score": 100,
+    "score":0,
     "corPrimario":"var(--azulCobalto)",
     "corSecundario":"#f3f3fd",
     "icon": "./assets/images/icon-visual.svg"
