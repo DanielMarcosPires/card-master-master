@@ -11,7 +11,7 @@ const Card = (props) =>{
                     <span className="CardRest">of 100</span>
                 </div>
                 <span>Great</span>
-                <p className='CardText'>You scored highter then 65% of the people who have taken these tests.</p>
+                <p className='CardText'>You scored highter then {props.total}% of the people who have taken these tests.</p>
             </aside>
             <div className='CardRightBar'>
                 <div class="CardMargin">
