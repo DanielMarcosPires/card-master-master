@@ -5,6 +5,9 @@
   align-items: center;
   height: 100vh;
 }
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .App-logo {
   height: 40vmin;

@@ -1,33 +1,48 @@
-import { useState } from 'react';
+import "./color/style.scss";
+import "./App.css";
 
-import './color/style.scss'
-import './App.css';
-
-import Card from './Components/Card';
-import JSONdata from './data.json'
+import Card from "./Components/Card";
+import JSONdata from "./data.json";
+import { useState } from "react";
 function App() {
 
-  let soma = 0
+  const [total, setTotal] = useState(0)
 
-  for(let i of JSONdata){
-    soma += i.score
+  function somaTotal(e) {
+    const dados = document.querySelectorAll('.inputs');
+    let sum =0
+    dados.forEach(inputs => sum += Number(inputs.value))
+    setTotal(sum/dados.length)
   }
-  
-  
-  console.log(soma);
   return (
     <div className="App">
-      <Card total={parseInt(soma/4)}>
-        {JSONdata.map(item =>{
-          return(
-            <li key={'oi'}  style={{background:item.corSecundario}} className='CardItem'>
+      <Card total={parseInt(total)}>
+        {JSONdata.map((item) => {
+          return (
+            <label
+              htmlFor={`alterarOvalor${item.id}`}
+              key={"oi"}
+              style={{ background: item.corSecundario }}
+              className="CardItem"
+            >
               <div>
                 <img src={item.icon} alt />
-                <p style={{color:item.corPrimario}}>{item.category}</p>
+                <p style={{ color: item.corPrimario }}>{item.category}</p>
               </div>
-              <p>{item.score}<span>/100</span></p>
-            </li>
-          )
+              <p className="d-flex">
+                <input
+                  className="inputs"
+                  onChange={somaTotal}
+                  max={100}
+                  defaultValue={100}
+                  min={0}
+                  type="number"
+                  id={`alterarOvalor${item.id}`}
+                />
+                <span>/100</span>
+              </p>
+            </label>
+          );
         })}
       </Card>
     </div>

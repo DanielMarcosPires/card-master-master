@@ -1,4 +1,28 @@
-
+.d-flex{
+    display: flex;
+    align-items: center;
+}
+input[type="number"]{
+    display: inline;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 30px auto;
+    max-width: 35px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+    transition: 0.2s;
+}
+input[type="number"]::selection{
+    background: rgba(0, 255, 0, 0.254);
+    color: #fff;
+    transition: 0.2s;
+}
+input[type="number"]:focus{
+    background: rgba(0, 0, 50, 0.415);
+    border-bottom: solid 1px;
+}
 :root{
     --vermelho:hsl(0, 100%, 67%);
     --laranjaAvermelhado:hsl(39, 100%, 56%);
