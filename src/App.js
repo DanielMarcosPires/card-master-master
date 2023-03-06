@@ -34,7 +34,7 @@ function App() {
                   className="inputs"
                   onChange={somaTotal}
                   max={100}
-                  defaultValue={100}
+                  defaultValue={0}
                   min={0}
                   type="number"
                   id={`alterarOvalor${item.id}`}
